@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>HTML Quiz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="quiz.js"> </script>
+</head>
+
+<body>
+    <div class="bg2">
+        <div class="box">
+            <!-- menu -->
+            <div class="logo-box"> <img src="img/logo.png"> </div>
+
+            <!-- content -->
+
+            <!-- 1 greeting section -->
+            <div id="greeting" class="bg1">
+
+                <div class="question-greet">
+                    <h1 style="font-weight: bolder;"> Herzlich Willkommen zum HTML Quiz </h1>
+                    <h2 style="font-weight: light;"> Stelle dich der Herausforderung ! </h2>
+                </div>
+                <a href='#' class="start-btn" onclick="showQuestions()">START &ensp; <img src="img/arrow.png"> </a>
+
+            </div>
+
+            <!-- 2 questions section -->
+            <div class="d-none bg2" id="questions">
+
+
+
+                <div class="center-box-question">
+
+                    <div class="question" id="question"> Das ist deine Frage !</div>
+
+                    <div class="answer">
+                        <div class="answer-letter" style="font-weight: bolder;">
+                            <h1> A </h1>
+                        </div>
+                        <div class="answer-option" id="answer">
+                            <h1> Antwort A </h1>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="answer">
+                        <div class="answer-letter" style="font-weight: bolder;">
+                            <h1> B </h1>
+                        </div>
+                        <div class="answer-option" id="answer">
+                            <h1> Antwort B </h1>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="answer">
+                        <div class="answer-letter" style="font-weight: bolder;">
+                            <h1> C </h1>
+                        </div>
+                        <div>
+                            <h1 class="answer-option" id="answer"> Antwort C </h1>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="answer">
+                        <div class="answer-letter" style="font-weight: bolder;">
+                            <h1> D </h1>
+                        </div>
+                        <div class="answer-option" id="answer">
+                            <h1> Antwort D </h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 3 finish section -->
+            <div class="d-none bg2" id="quiz-finish">
+
+                <div class="center-box-finish">
+                    <div class="finish-logo"> <img src="img/finish-logo.png"> </div>
+                    <div class="congratulation text-center" style="font-weight: bolder;">
+                        <h1> Herzlichen Glückwünsch.</h1>
+                    </div>
+                    <div class="congratulation text-center" style="font-weight: bolder;">
+                        <h1> Das Quiz ist erfolgreich beendet.</h1>
+                    </div>
+                    <div class="congratulation text-center text-green" style="font-weight: bolder;">
+                        <h1> Richtige Fragen 10/10 </h1>
+                    </div>
+                    <div class="text-center" style="font-weight: bolder;"> <a href='#' class="share-btn"> Teilen
+                            &ensp; <img src="img/share.png"> </a> </div>
+                    <br>
+                    <div class="text-center" style="font-weight: bolder;"> <a href='#' class="replay-btn">
+                            Wiederholen
+                            &ensp; <img src="img/replay.png"> </a> </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
