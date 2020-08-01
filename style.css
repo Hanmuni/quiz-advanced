@@ -102,22 +102,64 @@ body {
 .answer {
     display: flex;
     justify-content: space-between;
-    background-color: #FFFFFF;
+    text-align: center;
+    background-color: #FFFFFF !important;
+    color: black !important;
+    text-decoration: none;
     padding-right: 60vh;
 }
 
+.correct-answer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #B7F799; 
+    color: white;
+    text-decoration: none;
+    padding-right: 60vh;
+}
 .text-center {
     text-align: center;
 }
+.wrong-answer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFA4A4; 
+    color: white;
+    text-decoration: none;
+    padding-right: 60vh;
+
+}
 
 .answer-letter {
-    background-color: #D6D6D6;
-    color: black;
+    background-color: #D6D6D6 !important;
+    color: black !important;
+    text-decoration: none;
     margin: 20px;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.correct-answer-letter {
+    background-color: #4EBF18;
+    color: white; 
+    text-decoration: none;
+    margin: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.wrong-answer-letter {
+    background-color: #F81818;
+    color: white; 
+    text-decoration: none;
+    margin: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;  
 }
 
 .answer-option {
