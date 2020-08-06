@@ -24,8 +24,8 @@
                 <div class="question-greet">
                     <h1 style="font-weight: bolder;"> Herzlich Willkommen zum HTML Quiz </h1>
                     <h2 style="font-weight: light;"> Stelle dich der Herausforderung ! </h2>
+                    <a href='#' class="start-btn" onclick="init()">START &ensp; <img src="img/arrow.png"> </a>
                 </div>
-                <a href='#' class="start-btn" onclick="showQuestions()">START &ensp; <img src="img/arrow.png"> </a>
 
             </div>
 
@@ -39,9 +39,10 @@
                     <div class="question" id="question"> Das ist deine Frage !</div>
 
 
-                    <a href='#' class="answer correct-answer text-center" onclick="AnswerA()" id="answer-A">
+                    <a href='#' class="answer correct-answer wrong-answer" onclick="answerA()" id="answer-A">
 
-                        <div class="answer-letter correct-answer-letter" style="font-weight: bolder;" id="answer-letter-A">
+                        <div class="answer-letter correct-answer-letter wrong-answer-letter"
+                            style="font-weight: bolder;" id="answer-letter-A">
                             <h1> A </h1>
                         </div>
                         <div class="answer-option" id="answer1" style="font-weight: bolder; font-size: 25px;">
@@ -51,9 +52,10 @@
 
                     <br>
 
-                    <a href='#' class="answer wrong-answer text-center" onclick="AnswerB()" id="answer-B">
+                    <a href='#' class="answer correct-answer wrong-answer" onclick="answerB()" id="answer-B">
 
-                        <div class="answer-letter wrong-answer-letter" style="font-weight: bolder;" id="answer-letter-B">
+                        <div class="answer-letter correct-answer-letter wrong-answer-letter"
+                            style="font-weight: bolder;" id="answer-letter-B">
                             <h1> B </h1>
                         </div>
                         <div class="answer-option" id="answer2" style="font-weight: bolder; font-size: 25px;">
@@ -63,9 +65,10 @@
 
                     <br>
 
-                    <a href='#' class="answer wrong-answer text-center" onclick="AnswerC()" id="answer-C">
+                    <a href='#' class="answer correct-answer wrong-answer" onclick="answerC()" id="answer-C">
 
-                        <div class="answer-letter wrong-answer-letter" style="font-weight: bolder;" id="answer-letter-C">
+                        <div class="answer-letter correct-answer-letter wrong-answer-letter"
+                            style="font-weight: bolder;" id="answer-letter-C">
                             <h1> C </h1>
                         </div>
                         <div class="answer-option" id="answer3" style="font-weight: bolder; font-size: 25px;">
@@ -75,9 +78,10 @@
 
                     <br>
 
-                    <a href='#' class="answer wrong-answer text-center" onclick="AnswerD()" id="answer-D">
+                    <a href='#' class="answer correct-answer wrong-answer" onclick="answerD()" id="answer-D">
 
-                        <div class="answer-letter wrong-answer-letter" style="font-weight: bolder;" id="answer-letter-D">
+                        <div class="answer-letter correct-answer-letter wrong-answer-letter"
+                            style="font-weight: bolder;" id="answer-letter-D">
                             <h1> D </h1>
                         </div>
                         <div class="answer-option" id="answer4" style="font-weight: bolder; font-size: 25px;">
@@ -87,6 +91,8 @@
 
                 </div>
 
+                <a href='#' class="next-btn" id="next-btn" onclick="init()"> NEUE FRAGE &ensp; <img
+                        src="img/arrow.png"> </a>
             </div>
 
 
@@ -95,21 +101,22 @@
 
                 <div class="center-box-finish">
                     <div class="finish-logo"> <img src="img/finish-logo.png"> </div>
-                    <div class="congratulation text-center" style="font-weight: bolder;">
-                        <h1> Herzlichen Glückwünsch.</h1>
+                    <div style="font-weight: bolder;">
+                        <h1> Herzlichen Glückwunsch.</h1>
                     </div>
-                    <div class="congratulation text-center" style="font-weight: bolder;">
+                    <div style="font-weight: bolder;">
                         <h1> Das Quiz ist erfolgreich beendet.</h1>
                     </div>
-                    <div class="congratulation text-center text-green" style="font-weight: bolder;">
+                    <div style="font-weight: bolder;">
                         <h1> Richtige Fragen 10/10 </h1>
+
                     </div>
-                    <div class="text-center" style="font-weight: bolder;"> <a href='#' class="share-btn"> Teilen
-                            &ensp; <img src="img/share.png"> </a> </div>
-                    <br>
-                    <div class="text-center" style="font-weight: bolder;"> <a href='#' class="replay-btn">
+                    <div> <a href='#' class="share-btn" > Teilen
+                            &ensp; <img src="img/share.png"> </a>
+
+                        <a href='#' class="replay-btn" onclick="replay()">
                             Wiederholen
-                            &ensp; <img src="img/replay.png"> </a> </div>
+                            &ensp; <img src="img/replay.png"> </a></div>
 
                 </div>
 

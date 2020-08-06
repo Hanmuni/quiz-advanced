@@ -1,0 +1,20 @@
+[
+    {
+        "question": "Welches ist das größte Fußballstadion in Europa?",
+        "answer_1": "Camp Nou in Barcelona",
+        "answer_2": "Allianz Arena in München",
+        "answer_3": "Wembley-Stadion in London",
+        "answer_4": "Parc des Princes in Paris",
+        "right_answer": 1
+        
+    },
+
+    {
+        "question": "Wie wird das Match zwischen Real Madrid und FC Barcelona genannt?",
+        "answer_A": "El Derbi Madrileño",
+        "answer_B": "El Clásico.",
+        "answer_C": "El Derbi Barceloní",
+        "answer_D": "El Viejo Clásico",
+        "right_answer": 2
+    }
+]
