@@ -23,7 +23,7 @@ function showQuestions() {
     else {
         new_question = new_question + 1;
         console.log('Number of questions:',);
-        progress = Math.round((new_question / allQuestions.length) * 100);
+        progress = Math.round((new_question / allQuestions.length) * 10);
 
         hideElements();
         loadQuestion();
@@ -166,8 +166,12 @@ function answerD() {
 function finishQuiz() {
     document.getElementById('questions').classList.add('d-none');
     document.getElementById('quiz-finish').classList.remove('d-none');
+    document.getElementById('right-questions').innerHTML = "Richtig Fragen: " + right_answer + "/" + progress;
 }
+
 function replay() {
-    document.getElementById('quiz-finish').classList.add('d-none');
-    document.getElementById('greeting').classList.remove('d-none');
+    fullReset = document.getElementById('fullReset');
+    fullReset.addEventListener('click', function (e) {
+        location.reload();
+    }, false);
 }
