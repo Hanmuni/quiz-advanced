@@ -1,10 +1,10 @@
 [
     {
         "question": "Was ist eine Bogenlampe im Fußball?",
-        "answer_A": "Wenn ein Ball angehoben und über den Torwart hinweg ins Tor geschossen wird.",
-        "answer_B": "Eine Abseitsvariante.",
-        "answer_C": "Ein Elfmetertor",
-        "answer_D": "Lichtershow in der Fankurve",
+        "answer_1": "Wenn ein Ball angehoben und über den Torwart hinweg ins Tor geschossen wird",
+        "answer_2": "Eine Abseitsvariante",
+        "answer_3": "Ein Elfmetertor",
+        "answer_4": "Lichtershow in der Fankurve",
         "right_answer": 1
     },
 
@@ -20,74 +20,73 @@
 
     {
         "question": "In welchem Land fand die erste Fußball-WM statt?",
-        "answer_A": "Deutschland",
-        "answer_B": "Brasilien",
-        "answer_C": "Uruguay",
-        "answer_D": "USA",
+        "answer_1": "Deutschland",
+        "answer_2": "Brasilien",
+        "answer_3": "Uruguay",
+        "answer_4": "USA",
         "right_answer": 3
     },
 
     {
         "question": "Was ist eine Schwalbe im Fußball?",
-        "answer_A": "Eine Drohnenkamera die über dem Feld fliegt",
-        "answer_B": "Fußballschuhe mit hoher Sprungkraft.",
-        "answer_C": "Gesang der Fankurve",
-        "answer_D": "Ein vorgetäuschtes Foul.",
+        "answer_1": "Eine Drohnenkamera die über dem Feld fliegt",
+        "answer_2": "Fußballschuhe mit hoher Sprungkraft",
+        "answer_3": "Gesang der Fankurve",
+        "answer_4": "Ein vorgetäuschtes Foul",
         "right_answer": 4
     },
 
     {
         "question": "Welcher deutscher Verein neben Dortmund und München gewann ebenfalls die Champions League?",
-        "answer_A": "Hamburger SV",
-        "answer_B": "Schalke 04",
-        "answer_C": "Werder Bremen",
-        "answer_D": "TSG Hoffenheim",
+        "answer_1": "Hamburger SV",
+        "answer_2": "Schalke 04",
+        "answer_3": "Werder Bremen",
+        "answer_4": "TSG Hoffenheim",
         "right_answer": 1
     },
 
     {
         "question": "In welchem Erdteil wurde 1991 die erste Frauenfußball-WM ausgetragen?",
-        "answer_A": "Europa",
-        "answer_B": "Asien",
-        "answer_C": "Afrika",
-        "answer_D": "Australien",
+        "answer_1": "Europa",
+        "answer_2": "Asien",
+        "answer_3": "Afrika",
+        "answer_4": "Australien",
         "right_answer": 2
     },
 
     {
         "question": "Was ist ein Hattrick?",
-        "answer_A": "Der Champions League Pokal",
-        "answer_B": "Die Armbinde des Teamkapitäns.",
-        "answer_C": "Extra Nachspielzeit",
-        "answer_D": "Drei von einem Spieler hintereinander erzielte Tore.",
+        "answer_1": "Der Champions League Pokal",
+        "answer_2": "Die Armbinde des Teamkapitäns",
+        "answer_3": "Extra Nachspielzeit",
+        "answer_4": "Drei von einem Spieler hintereinander erzielte Tore",
         "right_answer": 4
     },
 
     {
         "question": "Welcher Fußballverein ist deutscher Rekordmeister?",
-        "answer_A": "Bayern München",
-        "answer_B": "Borussia Dortmund.",
-        "answer_C": "FC Nürnberg",
-        "answer_D": "Hamburger SV",
+        "answer_1": "Bayern München",
+        "answer_2": "Borussia Dortmund",
+        "answer_3": "FC Nürnberg",
+        "answer_4": "Hamburger SV",
         "right_answer": 1
     },
 
     {
         "question": "Was ist die FIFA?",
-        "answer_A": "WM-Maskottchen",
-        "answer_B": "Hymne der Champions League.",
-        "answer_C": "Fußball-Weltverband",
-        "answer_D": "Sponsor der Bundesliga",
+        "answer_1": "WM-Maskottchen",
+        "answer_2": "Hymne der Champions League.",
+        "answer_3": "Fußball-Weltverband",
+        "answer_4": "Sponsor der Bundesliga",
         "right_answer": 3
     },
-
     
     {
         "question": "Wie wird das Match zwischen Real Madrid und FC Barcelona genannt?",
-        "answer_A": "El Derbi Madrileño",
-        "answer_B": "El Clásico",
-        "answer_C": "El Derbi Barceloní",
-        "answer_D": "El Viejo Clásico",
+        "answer_1": "El Derbi Madrileño",
+        "answer_2": "El Clásico",
+        "answer_3": "El Derbi Barceloní",
+        "answer_4": "El Viejo Clásico",
         "right_answer": 2
     }
 ]

@@ -1,6 +1,8 @@
 let allQuestions;
 
 let right_answer = 0;
+let right_questions_answered = 0;
+let lastSelectedAnswer = 0;
 let new_question = 0;
 let progress = 0;
 
@@ -23,7 +25,7 @@ function showQuestions() {
     else {
         new_question = new_question + 1;
         console.log('Number of questions:',);
-        progress = Math.round((new_question / allQuestions.length) * 10);
+        progress = Math.round((new_question / allQuestions.length) * 100);
 
         hideElements();
         loadQuestion();
@@ -38,140 +40,93 @@ function loadQuestion() {
     document.getElementById('answer3').innerHTML = allQuestions[new_question - 1]['answer_3'];
     document.getElementById('answer4').innerHTML = allQuestions[new_question - 1]['answer_4'];
     right_answer = allQuestions[new_question - 1]['right_answer'];
+
+    if (right_answer == lastSelectedAnswer) { // Right answer selected
+        right_questions_answered++;  //
+    }
 }
 
 function hideElements() {
     document.getElementById('next-btn').classList.add('d-none');
 
-    document.getElementById('answer-A').classList.add('answer');
-    document.getElementById('answer-A').classList.remove('wrong-answer');
-    document.getElementById('answer-A').classList.remove('correct-answer');
-    document.getElementById('answer-letter-A').classList.add('answer-letter');
-    document.getElementById('answer-letter-A').classList.remove('wrong-answer-letter');
-    document.getElementById('answer-letter-A').classList.remove('correct-answer-letter');
+    hideElementsForQuestion(1);
+    hideElementsForQuestion(2);
+    hideElementsForQuestion(3);
+    hideElementsForQuestion(4);
 
-    document.getElementById('answer-B').classList.add('answer');
-    document.getElementById('answer-B').classList.remove('wrong-answer');
-    document.getElementById('answer-B').classList.remove('correct-answer');
-    document.getElementById('answer-letter-B').classList.add('answer-letter');
-    document.getElementById('answer-letter-B').classList.remove('wrong-answer-letter');
-    document.getElementById('answer-letter-B').classList.remove('correct-answer-letter');
-
-    document.getElementById('answer-C').classList.add('answer');
-    document.getElementById('answer-C').classList.remove('wrong-answer');
-    document.getElementById('answer-C').classList.remove('correct-answer');
-    document.getElementById('answer-letter-C').classList.add('answer-letter');
-    document.getElementById('answer-letter-C').classList.remove('wrong-answer-letter');
-    document.getElementById('answer-letter-C').classList.remove('correct-answer-letter');
-
-    document.getElementById('answer-D').classList.add('answer');
-    document.getElementById('answer-D').classList.remove('wrong-answer');
-    document.getElementById('answer-D').classList.remove('correct-answer');
-    document.getElementById('answer-letter-D').classList.add('answer-letter');
-    document.getElementById('answer-letter-D').classList.remove('wrong-answer-letter');
-    document.getElementById('answer-letter-D').classList.remove('correct-answer-letter');
 }
 
-function answerA() {
-    if (right_answer == 1) {
-        document.getElementById('answer-A').classList.remove('answer');
-        document.getElementById('answer-A').classList.remove('wrong-answer');
-        document.getElementById('answer-A').classList.add('correct-answer');
-        document.getElementById('answer-letter-A').classList.remove('answer-letter');
-        document.getElementById('answer-letter-A').classList.remove('wrong-answer-letter');
-        document.getElementById('answer-letter-A').classList.add('correct-answer-letter');
+function hideElementsForQuestion(selectedAnswer) {
+    document.getElementById('answer-' + selectedAnswer).classList.add('answer');
+    document.getElementById('answer-' + selectedAnswer).classList.remove('wrong-answer');
+    document.getElementById('answer-' + selectedAnswer).classList.remove('correct-answer');
+    document.getElementById('answer-letter-' + selectedAnswer).classList.add('answer-letter');
+    document.getElementById('answer-letter-' + selectedAnswer).classList.remove('wrong-answer-letter');
+    document.getElementById('answer-letter-' + selectedAnswer).classList.remove('correct-answer-letter');
+}
+
+/**
+ * 
+ * @param {numbre} selectedAnswer can be 1, 2, 3 or 4 
+ */
+function answer(selectedAnswer) {
+    lastSelectedAnswer = selectedAnswer;
+
+    if (right_answer == selectedAnswer) { // Right answer selected
+        document.getElementById('answer-' + selectedAnswer).classList.add('correct-answer');
+        document.getElementById('answer-' + selectedAnswer).classList.remove('answer');
+        document.getElementById('answer-' + selectedAnswer).classList.remove('wrong-answer');
+        document.getElementById('answer-letter-' + selectedAnswer).classList.add('correct-answer-letter');
+        document.getElementById('answer-letter-' + selectedAnswer).classList.remove('answer-letter');
+        document.getElementById('answer-letter-' + selectedAnswer).classList.remove('wrong-answer-letter');
+
+
+
 
         // Show next button
         document.getElementById('next-btn').classList.remove('d-none');
     }
 
-    else {
-        document.getElementById('answer-A').classList.remove('answer');
-        document.getElementById('answer-A').classList.remove('correct-answer');
-        document.getElementById('answer-A').classList.add('wrong-answer');
-        document.getElementById('answer-letter-A').classList.remove('answer-letter');
-        document.getElementById('answer-letter-A').classList.remove('correct-answer-letter');
-        document.getElementById('answer-letter-A').classList.add('wrong-answer-letter');
-    }
-}
-
-function answerB() {
-    if (right_answer == 2) {
-        document.getElementById('answer-B').classList.remove('answer');
-        document.getElementById('answer-B').classList.remove('wrong-answer');
-        document.getElementById('answer-B').classList.add('correct-answer');
-        document.getElementById('answer-letter-B').classList.remove('answer-letter');
-        document.getElementById('answer-letter-B').classList.remove('wrong-answer-letter');
-        document.getElementById('answer-letter-B').classList.add('correct-answer-letter');
-
-        // Show next button
-        document.getElementById('next-btn').classList.remove('d-none');
-    }
-
-    else {
-        document.getElementById('answer-B').classList.remove('answer');
-        document.getElementById('answer-B').classList.remove('correct-answer');
-        document.getElementById('answer-B').classList.add('wrong-answer');
-        document.getElementById('answer-letter-B').classList.remove('answer-letter');
-        document.getElementById('answer-letter-B').classList.remove('correct-answer-letter');
-        document.getElementById('answer-letter-B').classList.add('wrong-answer-letter');
-    }
-}
-function answerC() {
-    if (right_answer == 3) {
-        document.getElementById('answer-C').classList.remove('answer');
-        document.getElementById('answer-C').classList.remove('wrong-answer');
-        document.getElementById('answer-C').classList.add('correct-answer');
-        document.getElementById('answer-letter-C').classList.remove('answer-letter');
-        document.getElementById('answer-letter-C').classList.remove('wrong-answer-letter');
-        document.getElementById('answer-letter-C').classList.add('correct-answer-letter');
-
-        // Show next button
-        document.getElementById('next-btn').classList.remove('d-none');
-    }
-
-    else {
-        document.getElementById('answer-C').classList.remove('answer');
-        document.getElementById('answer-C').classList.remove('correct-answer');
-        document.getElementById('answer-C').classList.add('wrong-answer');
-        document.getElementById('answer-letter-C').classList.remove('answer-letter');
-        document.getElementById('answer-letter-C').classList.remove('correct-answer-letter');
-        document.getElementById('answer-letter-C').classList.add('wrong-answer-letter');
-
-    }
-}
-function answerD() {
-    if (right_answer == 4) {
-        document.getElementById('answer-D').classList.remove('answer');
-        document.getElementById('answer-D').classList.remove('wrong-answer');
-        document.getElementById('answer-D').classList.add('correct-answer');
-        document.getElementById('answer-letter-D').classList.remove('answer-letter');
-        document.getElementById('answer-letter-D').classList.remove('wrong-answer-letter');
-        document.getElementById('answer-letter-D').classList.add('correct-answer-letter');
-
-        // Show next button
-        document.getElementById('next-btn').classList.remove('d-none');
-    }
-
-    else {
-        document.getElementById('answer-D').classList.remove('answer');
-        document.getElementById('answer-D').classList.remove('correct-answer');
-        document.getElementById('answer-D').classList.add('wrong-answer');
-        document.getElementById('answer-letter-D').classList.remove('answer-letter');
-        document.getElementById('answer-letter-D').classList.remove('correct-answer-letter');
-        document.getElementById('answer-letter-D').classList.add('wrong-answer-letter');
+    else { // Wrong answer selected
+        document.getElementById('answer-' + selectedAnswer).classList.add('wrong-answer');
+        document.getElementById('answer-' + selectedAnswer).classList.remove('answer');
+        document.getElementById('answer-' + selectedAnswer).classList.remove('correct-answer');
+        document.getElementById('answer-letter-' + selectedAnswer).classList.add('wrong-answer-letter');
+        document.getElementById('answer-letter-' + selectedAnswer).classList.remove('answer-letter');
+        document.getElementById('answer-letter-' + selectedAnswer).classList.remove('correct-answer-letter');
     }
 }
 
 function finishQuiz() {
     document.getElementById('questions').classList.add('d-none');
     document.getElementById('quiz-finish').classList.remove('d-none');
-    document.getElementById('right-questions').innerHTML = "Richtig Fragen: " + right_answer + "/" + progress;
+    document.getElementById('right-questions').innerHTML = "Richtige Fragen: " + right_questions_answered + "/" + allQuestions.length;
 }
 
 function replay() {
-    fullReset = document.getElementById('fullReset');
-    fullReset.addEventListener('click', function (e) {
-        location.reload();
-    }, false);
+
+    document.getElementById('quiz-finish').classList.add('d-none');
+    document.getElementById('greeting').classList.remove('d-none');
+
+    right_answer = 0;
+    right_questions_answered = 0;
+    lastSelectedAnswer = 0;
+    new_question = 0;
+    progress = 0;
+
+    resetButton(1);
+    resetButton(2);
+    resetButton(3);
+    resetButton(4);
+
+    // location.reload();
+}
+
+function resetButton(id) {
+    document.getElementById('answer-' + id).classList.add('answer');
+    document.getElementById('answer-' + id).classList.remove('wrong-answer');
+    document.getElementById('answer-' + id).classList.remove('correct-answer');
+    document.getElementById('answer-letter-' + id).classList.add('answer-letter');
+    document.getElementById('answer-letter-' + id).classList.remove('correct-answer-letter');
+    document.getElementById('answer-letter-' + id).classList.remove('wrong-answer-letter');
 }

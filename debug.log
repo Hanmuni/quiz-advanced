@@ -1,3 +1,0 @@
-[0729/155214.542:ERROR:file_io.cc(89)] ReadExactly: expected 616, observed 0
-[0729/155214.745:ERROR:crash_report_database_win.cc(446)] failed to read records
-[0730/115645.418:ERROR:file_io.cc(134)] WriteFile: Die Pipe wird gerade geschlossen. (0xE8)

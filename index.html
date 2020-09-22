@@ -3,6 +3,7 @@
 <head>
     <title>HTML Quiz</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap"
         rel="stylesheet">
@@ -39,52 +40,52 @@
                     <div class="question" id="question"> Das ist deine Frage !</div>
 
 
-                    <a href='#' class="answer correct-answer wrong-answer" onclick="answerA()" id="answer-A">
+                    <a href='#' class="answer correct-answer wrong-answer" onclick="answer(1)" id="answer-1">
 
                         <div class="answer-letter correct-answer-letter wrong-answer-letter"
-                            style="font-weight: bolder;" id="answer-letter-A">
+                            style="font-weight: bolder;" id="answer-letter-1">
                             <h1> A </h1>
                         </div>
-                        <div class="answer-option" id="answer1" style="font-weight: bolder; font-size: 25px;">
+                        <div class="answer-option" id="answer1">
                             <h1> Antwort A </h1>
                         </div>
                     </a>
 
                     <br>
 
-                    <a href='#' class="answer correct-answer wrong-answer" onclick="answerB()" id="answer-B">
+                    <a href='#' class="answer correct-answer wrong-answer" onclick="answer(2)" id="answer-2">
 
                         <div class="answer-letter correct-answer-letter wrong-answer-letter"
-                            style="font-weight: bolder;" id="answer-letter-B">
+                            style="font-weight: bolder;" id="answer-letter-2">
                             <h1> B </h1>
                         </div>
-                        <div class="answer-option" id="answer2" style="font-weight: bolder; font-size: 25px;">
+                        <div class="answer-option" id="answer2">
                             <h1> Antwort B </h1>
                         </div>
                     </a>
 
                     <br>
 
-                    <a href='#' class="answer correct-answer wrong-answer" onclick="answerC()" id="answer-C">
+                    <a href='#' class="answer correct-answer wrong-answer" onclick="answer(3)" id="answer-3">
 
                         <div class="answer-letter correct-answer-letter wrong-answer-letter"
-                            style="font-weight: bolder;" id="answer-letter-C">
+                            style="font-weight: bolder;" id="answer-letter-3">
                             <h1> C </h1>
                         </div>
-                        <div class="answer-option" id="answer3" style="font-weight: bolder; font-size: 25px;">
+                        <div class="answer-option" id="answer3">
                             <h1> Antwort C </h1>
                         </div>
                     </a>
 
                     <br>
 
-                    <a href='#' class="answer correct-answer wrong-answer" onclick="answerD()" id="answer-D">
+                    <a href='#' class="answer correct-answer wrong-answer" onclick="answer(4)" id="answer-4">
 
                         <div class="answer-letter correct-answer-letter wrong-answer-letter"
-                            style="font-weight: bolder;" id="answer-letter-D">
+                            style="font-weight: bolder;" id="answer-letter-4">
                             <h1> D </h1>
                         </div>
-                        <div class="answer-option" id="answer4" style="font-weight: bolder; font-size: 25px;">
+                        <div class="answer-option" id="answer4">
                             <h1> Antwort D </h1>
                         </div>
                     </a>
@@ -117,7 +118,7 @@
                         <a href='https://www.facebook.com/' class="share-btn"> Teilen
                             &ensp; <img src="img/share.png"> </a>
 
-                        <a href='#' id="fullReset" class="replay-btn" type="reset" onclick="replay()"> Wiederholen
+                        <a href='#' class="replay-btn" onclick="replay()"> Wiederholen
                             &ensp; <img src="img/replay.png"> </a>
                     </div>
 
